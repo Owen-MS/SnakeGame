@@ -25,6 +25,7 @@ class Snake {
     if (value < 0 || value >= 300) {
       throw new Error('蛇撞墙了');
     }
+    // 是否可以反方向掉头
     if (this.bodies[1] && this.bodies[1].offsetLeft === value) {
       if (value > this.X) {
         value = this.X - 10;
@@ -42,6 +43,7 @@ class Snake {
     if (value < 0 || value >= 300) {
       throw new Error('蛇撞墙了');
     }
+    // 是否可以反方向掉头 单个允许
     if (this.bodies[1] && this.bodies[1].offsetTop === value) {
       if (value > this.Y) {
         value = this.Y - 10;
